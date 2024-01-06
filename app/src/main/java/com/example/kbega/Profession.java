@@ -18,6 +18,9 @@ import android.widget.Button;
  */
 public class Profession extends Fragment {
 
+    private Data data = new Data();
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -65,8 +68,9 @@ public class Profession extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profession, container, false);
 
-        Bundle bundle = new Bundle();
-        Data data = new Data();
+        Log.i("RRR", "55555555555555555");
+
+        Log.i("RRR", "666666666");
 
         Button medsestra = view.findViewById(R.id.medsestra);
         Button manager = view.findViewById(R.id.manager);
@@ -75,20 +79,17 @@ public class Profession extends Fragment {
         medsestra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bundle.putString(ARG_PARAM1,"medsestra");
-                data.name("medsestra");
-
-
-                Navigation.findNavController(view).navigate(R.id.action_profession_to_vnutrKrug,bundle);
+                data.setName("medsestra");
+                Navigation.findNavController(view).navigate(R.id.action_profession_to_vnutrKrug);
 
             }
         });
         manager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bundle.putString(ARG_PARAM1,"manager");
-                data.name("manager");
-                Navigation.findNavController(view).navigate(R.id.action_profession_to_vnutrKrug, bundle);
+
+                data.setName("manager");
+                Navigation.findNavController(view).navigate(R.id.action_profession_to_vnutrKrug);
             }
         });
 
@@ -96,9 +97,8 @@ public class Profession extends Fragment {
             @Override
             public void onClick(View view) {
 
-                bundle.putString(ARG_PARAM1,"pilot");
-                data.name("pilot");
-                Navigation.findNavController(view).navigate(R.id.action_profession_to_vnutrKrug, bundle);
+                data.setName("pilot");
+                Navigation.findNavController(view).navigate(R.id.action_profession_to_vnutrKrug);
             }
         });
         return view;

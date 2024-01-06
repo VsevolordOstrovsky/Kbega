@@ -27,7 +27,8 @@ public class VnutrKrug extends Fragment{
     private Doxod doxod;
     private Profession profession;
     private PlusDox plusDox;
-    private Data data = new Data();;
+    private Data data;
+
 
 
 
@@ -85,18 +86,10 @@ public class VnutrKrug extends Fragment{
 
 
 
-
-
-    public int pass_Dox = 0;
-    public int ob_Dox = 0;
     public int ob_Ras = 0;
     public int d_Potok = 0;
+    private int[] proffZnach;
 
-    public int [] num = {0};
-
-
-
-    private String[] qwerty;
 
 
 
@@ -105,12 +98,16 @@ public class VnutrKrug extends Fragment{
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_vnutr_krug, container, false);
 
-        doxod  = new Doxod();
+
+
         profession = new Profession();
         plusDox = new PlusDox();
+        data = new Data();
+
         Bundle bundle = new Bundle();
+        doxod  = new Doxod();
 
-
+        proffZnach = proff.getName(data.getName());
 
 
 
@@ -131,16 +128,16 @@ public class VnutrKrug extends Fragment{
 
         Log.i("RRR", "??????????????????????????????????????????????");
 
-        num = proff.getName(mParam1);
-        qwerty = getArguments().getStringArray("VnutrKrug");
 
 
 
 
 
 
-        salary.setText(String.valueOf(num[0]));
-        salaryDox.setText(String.valueOf(num[0]));
+
+
+        salary.setText(String.valueOf(proffZnach[0]));
+        salaryDox.setText(String.valueOf(proffZnach[0]));
 
 
 
@@ -165,24 +162,23 @@ public class VnutrKrug extends Fragment{
     }
 
     private void update(){
+        doxod.update();
 
+        passDox.setText(String.valueOf(doxod.pass_Dox));
+        div_proc.setText(String.valueOf(doxod.pass_Dox));
 
-        passDox.setText(String.valueOf(pass_Dox));
-        ob_Dox = num[0]+pass_Dox;
-        obDox.setText(String.valueOf(ob_Dox));
+        obDox.setText(String.valueOf(doxod.ob_Dox));
 
         ob_Ras = 0;
         for(int i = 1; i < 7;i++){
-            ob_Ras+=num[i];
+            ob_Ras+=proffZnach[i];
         }
         obRas.setText(String.valueOf(ob_Ras));
 
-        d_Potok = ob_Dox-ob_Ras;
+        d_Potok = doxod.ob_Dox-ob_Ras;
         potok.setText(String.valueOf(d_Potok));
 
-        Log.i("RRR", "-------------------------------------------");
-        //Log.i("RRR", (qwerty[0]));
-        //div_proc.setText(String.valueOf(znach[4]));
+
 
     }
 

@@ -3,7 +3,6 @@ package com.example.kbega.Dox;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -13,10 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.kbega.Data;
 import com.example.kbega.R;
 import com.example.kbega.VnutrKrug;
 
@@ -27,6 +26,7 @@ import com.example.kbega.VnutrKrug;
  */
 public class PlusDox extends Fragment {
     View view;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,14 +75,16 @@ public class PlusDox extends Fragment {
     private Doxod doxod;
     private  VnutrKrug vnutrKrug;
     LinearLayout vvod;
-    public String[] znach = {"0","0","0","0","0"};
+    private String[] znach = {"0","0","0","0","0"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_plus_dox, container, false);
-        Log.i("Seva", "88888888888888888888888888888888888");
+
         Bundle bundle = new Bundle();
+        Data data = new Data();
+        doxod = new Doxod();
 
         vnutrKrug = new VnutrKrug();
         Intent intent = new Intent();
@@ -130,15 +132,13 @@ public class PlusDox extends Fragment {
                     znach[2] = ipoteka.getText().toString();
                     znach[3] = forstVz.getText().toString();
                     znach[4] = moneyRiver.getText().toString();
-
-                    bundle.putString(mParam1,mParam1);
-                    bundle.putStringArray("VnutrKrug", znach);
-
-
+                    Log.i("Seva", "88888888888888888888888888888888888");
+                    doxod.setZnachF(znach);
+                    Log.i("Seva", "99999999999999999999999999999999999");
 
 
 
-                    Navigation.findNavController(view).navigate(R.id.action_plusDox_to_vnutrKrug, bundle);
+                    Navigation.findNavController(view).navigate(R.id.action_plusDox_to_vnutrKrug);
                 }
             }
         });

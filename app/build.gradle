@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-    def nav_version = "2.5.3"
+    def nav_version = '2.7.6'
 
     // Java language implementation
     implementation "androidx.navigation:navigation-fragment:$nav_version"

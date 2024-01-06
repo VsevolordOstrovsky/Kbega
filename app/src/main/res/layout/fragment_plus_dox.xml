@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#85C1E9"
+    tools:context=".Dox.PlusDox">
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/houseTow"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#2E7BFA"
+                    android:text="Дом 2/1" />
+
+                <Button
+                    android:id="@+id/houseThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#2E7BFA"
+                    android:text="Дом 3/2" />
+
+                <Button
+                    android:id="@+id/flat"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#2E7BFA"
+                    android:text="Квартира 2/1" />
+
+                <Button
+                    android:id="@+id/pleksFore"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#2E7BFA"
+                    android:text="4-Плекс" />
+
+                <Button
+                    android:id="@+id/pleksEight"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#2E7BFA"
+                    android:text="8-Плекс" />
+
+                <Button
+                    android:id="@+id/flatHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#2E7BFA"
+                    android:text="Многоквартирный дом" />
+
+                <Button
+                    android:id="@+id/dupleks"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#2E7BFA"
+                    android:text="Дуплекс" />
+
+                <Button
+                    android:id="@+id/buizness"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#2E7BFA"
+                    android:text="Бизнес" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/vvod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#85C1E9"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Цена"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/firstVz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Первый взнос"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/ipoteka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ипотека"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/moneyRiver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Денежный поток"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/vnutKrug"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:backgroundTint="#2E7BFA"
+        android:text="55555"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

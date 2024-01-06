@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profession">
+
+    <fragment
+        android:id="@+id/vnutrKrug"
+        android:name="com.example.kbega.VnutrKrug"
+        android:label="fragment_vnutr_krug"
+        tools:layout="@layout/fragment_vnutr_krug" >
+        <action
+            android:id="@+id/action_vnutrKrug_to_plusDox"
+            app:destination="@id/plusDox" />
+        <argument
+            android:name="VnutrKrug"
+            app:argType="string[]"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profession"
+        android:name="com.example.kbega.Profession"
+        android:label="fragment_profession"
+        tools:layout="@layout/fragment_profession" >
+        <action
+            android:id="@+id/action_profession_to_vnutrKrug"
+            app:destination="@id/vnutrKrug" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/plusDox"
+        android:name="com.example.kbega.Dox.PlusDox"
+        android:label="fragment_plus_dox"
+        tools:layout="@layout/fragment_plus_dox" >
+        <action
+            android:id="@+id/action_plusDox_to_vnutrKrug"
+            app:destination="@id/vnutrKrug" />
+    </fragment>
+</navigation>

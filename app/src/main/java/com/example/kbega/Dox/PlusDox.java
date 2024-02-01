@@ -1,5 +1,6 @@
 package com.example.kbega.Dox;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -76,6 +77,7 @@ public class PlusDox extends Fragment {
     private  VnutrKrug vnutrKrug;
     LinearLayout vvod;
     private String[] znach = {"0","0","0","0","0"};
+    Data data;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -83,7 +85,7 @@ public class PlusDox extends Fragment {
         view = inflater.inflate(R.layout.fragment_plus_dox, container, false);
 
         Bundle bundle = new Bundle();
-        Data data = new Data();
+        data = new Data();
         doxod = new Doxod();
 
         vnutrKrug = new VnutrKrug();
@@ -110,15 +112,40 @@ public class PlusDox extends Fragment {
 
         houseTow.setOnClickListener(onClickListener);
         houseThree.setOnClickListener(onClickListener);
-        flat.setOnClickListener(onClickListener);
+
         pleksFore.setOnClickListener(onClickListener);
         pleksEight.setOnClickListener(onClickListener);
-        flatHouse.setOnClickListener(onClickListener);
+        flat.setOnClickListener(onClickListener);
         dupleks.setOnClickListener(onClickListener);
         buizness.setOnClickListener(onClickListener);
 
         Toast toast = Toast.makeText(getContext(),
                 "Заполните все поля", Toast.LENGTH_SHORT);
+
+
+        flatHouse.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                Log.i("ERR","+++++++++++++++++++++++++");
+                vvod.setX(0);
+//                EditText editText = new EditText(getContext());
+//                editText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//                editText.setHint("Колличество квартир");
+//                editText.setHintTextColor(R.color.white);
+//                editText.setTextColor(R.color.white);
+//                editText.setTextSize(32);
+//                vvod.addView(editText);
+
+
+
+                Log.i("ERR","---------------------------");
+
+                String str = flatHouse.getText().toString();
+
+                znach[0] = str;
+            }
+        });
 
         vnutKrug.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,10 +165,18 @@ public class PlusDox extends Fragment {
 
 
 
+                    for(int i = 0; i < znach.length; i++){
+                        data.dataTimeNedv.add(znach[i]);
+                    }
+
                     Navigation.findNavController(view).navigate(R.id.action_plusDox_to_vnutrKrug);
                 }
             }
         });
+
+
+
+
 
 
         return view;
@@ -154,6 +189,7 @@ public class PlusDox extends Fragment {
 
             Button b = (Button) view;
             String str = b.getText().toString();
+
             znach[0] = str;
         }
     };

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dox.SellDox">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnReturn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@color/lightBlue"
+            android:backgroundTint="@color/lightBlue"
+            android:src="@drawable/cross" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/darkBlue"
+            android:gravity="center"
+            android:text="Продажа"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="ScrollViewSize">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/gran"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="Цена покупки"
+                    android:textColor="@color/darkText" />
+
+                <TextView
+                    android:id="@+id/priceBuy"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/gran"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="+ 10%"
+                    android:textColor="@color/darkText" />
+
+                <TextView
+                    android:id="@+id/tenP"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/gran"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="+ 15%"
+                    android:textColor="@color/darkText" />
+
+                <TextView
+                    android:id="@+id/fifteenP"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/gran"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="+ 20%"
+                    android:textColor="@color/darkText" />
+
+                <TextView
+                    android:id="@+id/twentyP"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView3" />
+
+    <Button
+        android:id="@+id/backOK"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:backgroundTint="@color/addBlue"
+        android:text="OK"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

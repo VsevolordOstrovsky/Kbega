@@ -10,159 +10,187 @@
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="100dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            tools:ignore="ScrollViewSize">
 
             <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="@drawable/gran"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="45dp"
                     android:background="#00FFFFFF"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="Зарплата" />
+                    android:text="Зарплата"
+                    android:textColor="@color/darkText" />
 
                 <TextView
                     android:id="@+id/salary"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="55dp"
                     android:background="#00FFFFFF"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:id="@+id/lPassDox"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="@drawable/gran"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView3"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="45dp"
                     android:background="#00FFFFFF"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="Пассивный доход" />
+                    android:text="Пассивный доход"
+                    android:textColor="@color/darkText" />
 
                 <TextView
                     android:id="@+id/passDox"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="55dp"
                     android:background="#00FFFFFF"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="@drawable/gran"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView5"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="45dp"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="Общий доход" />
+                    android:text="Общий доход"
+                    android:textColor="@color/darkText" />
 
                 <TextView
                     android:id="@+id/obDox"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="55dp"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="@drawable/gran"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView7"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="45dp"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="Общие расходы" />
+                    android:text="Общие расходы"
+                    android:textColor="@color/darkText" />
 
                 <TextView
                     android:id="@+id/obRas"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="55dp"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="@drawable/gran"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView9"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="45dp"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="Денежный поток" />
+                    android:text="Денежный поток"
+                    android:textColor="@color/darkText" />
 
                 <TextView
                     android:id="@+id/potok"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="55dp"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textColor="@color/secText" />
             </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
-
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/income"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFEB3B">
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/textView20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#2122FF"
+                    android:background="@color/darkBlue"
                     android:gravity="center"
                     android:text="Доходы"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -170,7 +198,7 @@
                     android:id="@+id/linearLayout2"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="#CECEFF"
+                    android:background="@color/white"
                     android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView20">
@@ -179,7 +207,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="2"
-                        android:background="#CECEFF"
+                        android:background="@color/white"
                         android:orientation="vertical">
 
                         <TextView
@@ -187,35 +215,35 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="@drawable/granforup"
+                            android:background="@color/white"
                             android:gravity="center"
                             android:text="Статья"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/darkText" />
 
                         <TextView
                             android:id="@+id/textView25"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="#CECEFF"
+                            android:background="@color/white"
                             android:text=" Зарплата:"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/darkText" />
 
                         <TextView
                             android:id="@+id/textView26"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="#CECEFF"
+                            android:background="@color/white"
                             android:text=" Проценты/Дивиденды:"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/darkText" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#CECEFF"
+                        android:background="@color/white"
                         android:orientation="vertical">
 
                         <TextView
@@ -223,30 +251,30 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:background="@drawable/granforup"
+                            android:background="@color/white"
                             android:gravity="center"
                             android:text="Денежный поток"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/darkText" />
 
                         <TextView
                             android:id="@+id/salaryDox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:background="#CECEFF"
+                            android:background="@color/white"
                             android:gravity="center"
                             android:text="TextView"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/secText" />
 
                         <TextView
                             android:id="@+id/div_proc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:background="#CECEFF"
+                            android:background="@color/white"
                             android:gravity="center"
                             android:text="TextView"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/secText" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -254,19 +282,20 @@
                     android:id="@+id/doxScrol"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#CECEFF"
+                    android:background="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/granforup"
+                        android:background="@color/white"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/white"
                             android:orientation="horizontal">
 
                             <TextView
@@ -274,14 +303,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
+                                android:background="@color/white"
                                 android:text=" Недвижимость/Бизнес:"
-                                android:textColor="#FFFFFF" />
+                                android:textColor="@color/darkText" />
 
                             <Button
-                                android:id="@+id/button2"
+                                android:id="@+id/chekNidv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="45dp"
                                 android:layout_weight="2"
+                                android:backgroundTint="@color/addBlue"
                                 android:text="Просмотр" />
 
                             <Button
@@ -289,6 +320,7 @@
                                 android:layout_width="45dp"
                                 android:layout_height="45dp"
                                 android:layout_weight="2"
+                                android:backgroundTint="@color/addBlue"
                                 android:text="+" />
 
                         </LinearLayout>

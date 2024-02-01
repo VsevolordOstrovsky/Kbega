@@ -16,6 +16,9 @@
         <argument
             android:name="VnutrKrug"
             app:argType="string[]"/>
+        <action
+            android:id="@+id/action_vnutrKrug_to_doxChek"
+            app:destination="@id/doxChek" />
     </fragment>
     <fragment
         android:id="@+id/profession"
@@ -35,5 +38,26 @@
         <action
             android:id="@+id/action_plusDox_to_vnutrKrug"
             app:destination="@id/vnutrKrug" />
+    </fragment>
+    <fragment
+        android:id="@+id/doxChek"
+        android:name="com.example.kbega.Dox.DoxChek"
+        android:label="fragment_dox_chek"
+        tools:layout="@layout/fragment_dox_chek" >
+        <action
+            android:id="@+id/action_doxChek_to_vnutrKrug"
+            app:destination="@id/vnutrKrug" />
+        <action
+            android:id="@+id/action_doxChek_to_sellDox"
+            app:destination="@id/sellDox" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellDox"
+        android:name="com.example.kbega.Dox.SellDox"
+        android:label="fragment_sell_dox"
+        tools:layout="@layout/fragment_sell_dox" >
+        <action
+            android:id="@+id/action_sellDox_to_doxChek"
+            app:destination="@id/doxChek" />
     </fragment>
 </navigation>

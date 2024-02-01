@@ -11,6 +11,8 @@ import android.view.VerifiedInputEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.kbega.Dox.Doxod;
@@ -97,6 +99,7 @@ public class VnutrKrug extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_vnutr_krug, container, false);
+        LinearLayout lPassDox = view.findViewById(R.id.lPassDox);
 
 
 
@@ -118,6 +121,7 @@ public class VnutrKrug extends Fragment{
 
 
         Button plusDox = view.findViewById(R.id.plus_Dox);
+        Button chekNidv = view.findViewById(R.id.chekNidv);
         salary = view.findViewById(R.id.salary);
         salaryDox = view.findViewById(R.id.salaryDox);
         passDox = view.findViewById(R.id.passDox);
@@ -151,6 +155,20 @@ public class VnutrKrug extends Fragment{
             public void onClick(View view) {
                 bundle.putString(ARG_PARAM1,ARG_PARAM1);
                 Navigation.findNavController(view).navigate(R.id.action_vnutrKrug_to_plusDox,bundle);
+            }
+        });
+
+        chekNidv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view).navigate(R.id.action_vnutrKrug_to_doxChek);
+            }
+        });
+
+        lPassDox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view).navigate(R.id.action_vnutrKrug_to_doxChek);
             }
         });
 

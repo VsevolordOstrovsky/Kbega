@@ -12,4 +12,11 @@
     <color name="colorAccent">#536DFE</color>
     <color name="blueT">#6E6FFF</color>
     <color name="fortablet">#2122FF</color>
+    <color name="lightBlue">#448AFF</color>
+    <color name="darkBlue">#1976D2</color>
+    <color name="addBlue">#03A9F4</color>
+    <color name="darkWight">#BBDEFB</color>
+    <color name="darkText">#212121</color>
+    <color name="lightText">#BDBDBD</color>
+    <color name="secText">#757575</color>
 </resources>

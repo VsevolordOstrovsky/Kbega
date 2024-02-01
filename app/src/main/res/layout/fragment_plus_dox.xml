@@ -4,16 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#85C1E9"
+    android:background="@color/lightBlue"
     tools:context=".Dox.PlusDox">
 
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/darkBlue"
+        android:gravity="center"
+        android:text="Выберете недвижемость"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="681dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -30,56 +41,56 @@
                     android:id="@+id/houseTow"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:backgroundTint="#2E7BFA"
+                    android:backgroundTint="@color/addBlue"
                     android:text="Дом 2/1" />
 
                 <Button
                     android:id="@+id/houseThree"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:backgroundTint="#2E7BFA"
+                    android:backgroundTint="@color/addBlue"
                     android:text="Дом 3/2" />
 
                 <Button
                     android:id="@+id/flat"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:backgroundTint="#2E7BFA"
+                    android:backgroundTint="@color/addBlue"
                     android:text="Квартира 2/1" />
 
                 <Button
                     android:id="@+id/pleksFore"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:backgroundTint="#2E7BFA"
+                    android:backgroundTint="@color/addBlue"
                     android:text="4-Плекс" />
 
                 <Button
                     android:id="@+id/pleksEight"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:backgroundTint="#2E7BFA"
+                    android:backgroundTint="@color/addBlue"
                     android:text="8-Плекс" />
 
                 <Button
                     android:id="@+id/flatHouse"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:backgroundTint="#2E7BFA"
+                    android:backgroundTint="@color/addBlue"
                     android:text="Многоквартирный дом" />
 
                 <Button
                     android:id="@+id/dupleks"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:backgroundTint="#2E7BFA"
+                    android:backgroundTint="@color/addBlue"
                     android:text="Дуплекс" />
 
                 <Button
                     android:id="@+id/buizness"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:backgroundTint="#2E7BFA"
+                    android:backgroundTint="@color/addBlue"
                     android:text="Бизнес" />
 
 
@@ -91,7 +102,7 @@
         android:id="@+id/vvod"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#85C1E9"
+        android:background="@color/lightBlue"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -141,16 +152,14 @@
             android:textColorHint="#FFFFFF"
             android:textSize="32sp" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/vnutKrug"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:backgroundTint="@color/addBlue"
+            android:text="OK"
+            android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/vnutKrug"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:backgroundTint="#2E7BFA"
-        android:text="55555"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

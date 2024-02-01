@@ -14,6 +14,7 @@ public class Doxod {
     // 0 - название, 1 - цена, 2 - ипотека, 3 - взнос, 4 - денежный потоk
 
     private static String[] znachF = {"0","0","0","0","0"};
+    public static int idDox;
     private int[] num = proff.getName(data.getName());
 
     public static int pass_Dox = 0;

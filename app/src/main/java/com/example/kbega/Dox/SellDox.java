@@ -5,11 +5,15 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.kbega.Data;
 import com.example.kbega.R;
@@ -64,6 +68,7 @@ public class SellDox extends Fragment {
     Doxod doxod;
     Data data;
     private int key;
+    private EditText sellP;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,12 +78,51 @@ public class SellDox extends Fragment {
         doxod = new Doxod();
         data = new Data();
         key = doxod.idDox;
-        int value = data.dataTimeNedv.size()/key;
+        int rezult = key*5-4;
 
 
 
+        TextView priceBuy, tenP, fifteenP, twentyP;
+        priceBuy = view.findViewById(R.id.priceBuy);
+        tenP = view.findViewById(R.id.tenP);
+        fifteenP = view.findViewById(R.id.fifteenP);
+        twentyP = view.findViewById(R.id.twentyP);
+        int price = Integer.parseInt(data.dataTimeNedv.get(rezult));
+        priceBuy.setText(data.dataTimeNedv.get(rezult));
+        int ten, fifteen, twenty;
+        ten = price/100*10+price;
+        fifteen = price/100*15+price;
+        twenty = price/100*20+price;
+        tenP.setText(String.valueOf(ten));
+        fifteenP.setText(String.valueOf(fifteen));
+        twentyP.setText(String.valueOf(twenty));
 
 
+        LinearLayout plusTen, plusFifteen, plusTwenty;
+        plusTen = view.findViewById(R.id.plusTen);
+        plusFifteen = view.findViewById(R.id.plusFifteen);
+        plusTwenty = view.findViewById(R.id.plusTwenty);
+        plusTen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sellP.setText(tenP.getText());
+            }
+        });
+        plusFifteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sellP.setText(fifteenP.getText());
+            }
+        });
+        plusTwenty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sellP.setText(twentyP.getText());
+            }
+        });
+
+
+        sellP = view.findViewById(R.id.editTextText);
 
 
 
@@ -92,6 +136,9 @@ public class SellDox extends Fragment {
             }
         });
 
+
+
         return view;
     }
+
 }

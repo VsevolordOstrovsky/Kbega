@@ -50,6 +50,9 @@
         <action
             android:id="@+id/action_doxChek_to_sellDox"
             app:destination="@id/sellDox" />
+        <action
+            android:id="@+id/action_doxChek_to_izmDox"
+            app:destination="@id/izmDox" />
     </fragment>
     <fragment
         android:id="@+id/sellDox"
@@ -58,6 +61,15 @@
         tools:layout="@layout/fragment_sell_dox" >
         <action
             android:id="@+id/action_sellDox_to_doxChek"
+            app:destination="@id/doxChek" />
+    </fragment>
+    <fragment
+        android:id="@+id/izmDox"
+        android:name="com.example.kbega.Dox.IzmDox"
+        android:label="fragment_izm_dox"
+        tools:layout="@layout/fragment_izm_dox" >
+        <action
+            android:id="@+id/action_izmDox_to_doxChek"
             app:destination="@id/doxChek" />
     </fragment>
 </navigation>

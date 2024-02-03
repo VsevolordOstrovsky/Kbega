@@ -112,7 +112,7 @@ public class SellDox extends Fragment {
         sellP = view.findViewById(R.id.editTextText);
 
 
-        Button backOK = view.findViewById(R.id.backOK);
+        Button backOK = view.findViewById(R.id.returnOK);
         plusTen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

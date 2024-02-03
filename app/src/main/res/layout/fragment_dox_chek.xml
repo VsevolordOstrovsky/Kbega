@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/closeBut"
+            android:id="@+id/closeButt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="6"

@@ -1,10 +1,7 @@
 package com.example.kbega.Dox;
 
 import android.annotation.SuppressLint;
-import android.content.res.ColorStateList;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,7 +13,6 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -84,7 +80,7 @@ public class DoxChek extends Fragment {
         view = inflater.inflate(R.layout.fragment_dox_chek, container, false);
         doxod = new Doxod();
 
-        ImageButton closeBut = view.findViewById(R.id.closeBut);
+        ImageButton closeBut = view.findViewById(R.id.closeButt);
 
 
 
@@ -153,6 +149,7 @@ public class DoxChek extends Fragment {
                 izm.setBackgroundResource(0);
 
                 sell.setId(idCount);
+                izm.setId(idCount);
                 idCount++;
 
 
@@ -200,6 +197,7 @@ public class DoxChek extends Fragment {
                 ipotekaB.addView(eText);
 
                 sell.setOnClickListener(onClickListenerSELL);
+                izm.setOnClickListener(onClickListenerIzm);
 
 
 
@@ -252,7 +250,7 @@ public class DoxChek extends Fragment {
         public void onClick(View view) {
             doxod.idDox = view.getId();
             Log.i("IDDDDDDDDDD", String.valueOf(doxod.idDox));
-            Navigation.findNavController(view).navigate(R.id.action_doxChek_to_sellDox);
+            Navigation.findNavController(view).navigate(R.id.action_doxChek_to_izmDox);
             Log.i("IDDDDDDDDDD", String.valueOf(doxod.idDox));
         }
     };

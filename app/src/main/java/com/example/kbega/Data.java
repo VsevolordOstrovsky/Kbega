@@ -8,6 +8,7 @@ public class Data {
 
 
     private static String nameSave;
+    public static int savings = 0;
 
     public static ArrayList<String> dataTimeNedv = new ArrayList<>();
 

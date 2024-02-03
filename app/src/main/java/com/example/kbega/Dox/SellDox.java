@@ -69,6 +69,7 @@ public class SellDox extends Fragment {
     Data data;
     private int key;
     private EditText sellP;
+    private int start, stop;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -79,10 +80,15 @@ public class SellDox extends Fragment {
         data = new Data();
         key = doxod.idDox;
         int rezult = key*5-4;
+        int ipot = key*5-3;
+
+        start = key*5-5;
+        stop = key*5;
 
 
 
-        TextView priceBuy, tenP, fifteenP, twentyP;
+        TextView priceBuy, tenP, fifteenP, twentyP, textSell;
+        textSell = view.findViewById(R.id.textSell);
         priceBuy = view.findViewById(R.id.priceBuy);
         tenP = view.findViewById(R.id.tenP);
         fifteenP = view.findViewById(R.id.fifteenP);
@@ -97,11 +103,16 @@ public class SellDox extends Fragment {
         fifteenP.setText(String.valueOf(fifteen));
         twentyP.setText(String.valueOf(twenty));
 
+        textSell.setText("Вы продаёте "+data.dataTimeNedv.get(start));
 
         LinearLayout plusTen, plusFifteen, plusTwenty;
         plusTen = view.findViewById(R.id.plusTen);
         plusFifteen = view.findViewById(R.id.plusFifteen);
         plusTwenty = view.findViewById(R.id.plusTwenty);
+        sellP = view.findViewById(R.id.editTextText);
+
+
+        Button backOK = view.findViewById(R.id.backOK);
         plusTen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,13 +133,6 @@ public class SellDox extends Fragment {
         });
 
 
-        sellP = view.findViewById(R.id.editTextText);
-
-
-
-
-
-
         returnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,9 +140,28 @@ public class SellDox extends Fragment {
             }
         });
 
+        backOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int getNumber = Integer.parseInt(sellP.getText().toString());
+                int ipoteka = Integer.parseInt(data.dataTimeNedv.get(ipot));
+                data.savings += getNumber-ipoteka;
+                Log.i("Save", String.valueOf(data.savings));
+                removeItems(start,stop);
+                Navigation.findNavController(view).navigate(R.id.action_sellDox_to_doxChek);
+            }
+        });
+
+
 
 
         return view;
+    }
+
+    private void removeItems(int start, int stop){
+        for(int i = stop-1; i >= start; i--){
+            data.dataTimeNedv.remove(start);
+        }
     }
 
 }

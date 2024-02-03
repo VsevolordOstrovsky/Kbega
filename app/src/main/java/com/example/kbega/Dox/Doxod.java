@@ -8,7 +8,7 @@ import com.example.kbega.Proff;
 import com.example.kbega.VnutrKrug;
 
 public class Doxod {
-    Data data = new Data();
+    static Data data = new Data();
     Proff proff = new Proff();
 
     // 0 - название, 1 - цена, 2 - ипотека, 3 - взнос, 4 - денежный потоk
@@ -16,8 +16,12 @@ public class Doxod {
     private static String[] znachF = {"0","0","0","0","0"};
     public static int idDox;
     private int[] num = proff.getName(data.getName());
+    private int koff = data.dataTimeNedv.size();
 
-    public static int pass_Dox = 0;
+    public int pass_Dox = plusPass(data.dataTimeNedv.size());
+
+
+
     public static int ob_Dox;
 
     public void update(){
@@ -33,6 +37,13 @@ public class Doxod {
     }
     public String[] getZnachF(){
         return znachF;
+    }
+    private int plusPass(int len){
+        int summ = 0;
+        for(int i = 4; i < len; i += 5){
+            summ+=Integer.parseInt(data.dataTimeNedv.get(i));
+        }
+        return summ;
     }
 
 

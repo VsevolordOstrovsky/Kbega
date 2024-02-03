@@ -159,7 +159,7 @@ public class SellDox extends Fragment {
     }
 
     private void removeItems(int start, int stop){
-        for(int i = stop-1; i >= start; i--){
+        for(int i = 0; i < 5; i++){
             data.dataTimeNedv.remove(start);
         }
     }

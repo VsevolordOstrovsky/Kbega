@@ -93,7 +93,7 @@
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Денежный поток"
+                            android:text="Цена"
                             android:textColor="@color/darkText"
                             android:textSize="24sp" />
                     </LinearLayout>
@@ -113,7 +113,7 @@
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Первый взнос"
+                            android:text="Денежный поток"
                             android:textColor="@color/darkText"
                             android:textSize="24sp" />
 
@@ -134,7 +134,7 @@
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Цена"
+                            android:text="Первый взнос"
                             android:textColor="@color/darkText"
                             android:textSize="24sp" />
                     </LinearLayout>

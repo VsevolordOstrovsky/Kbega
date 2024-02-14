@@ -85,6 +85,9 @@ public class VnutrKrug extends Fragment{
     private TextView  potok;
     private TextView salaryDox;
     private TextView div_proc;
+    private TextView ipotRas, eduRas, carRas, cardRas;
+    private ImageButton ipotRasBut, eduRasBut, carRasBut, cardRasBut;
+    Button allRas;
 
 
 
@@ -130,11 +133,6 @@ public class VnutrKrug extends Fragment{
         potok = view.findViewById(R.id.potok);
         div_proc = view.findViewById(R.id.div_proc);
 
-        Log.i("RRR", "??????????????????????????????????????????????");
-
-
-
-
 
 
 
@@ -142,6 +140,13 @@ public class VnutrKrug extends Fragment{
 
         salary.setText(String.valueOf(proffZnach[0]));
         salaryDox.setText(String.valueOf(proffZnach[0]));
+
+        initRas();
+
+
+
+
+
 
 
 
@@ -172,6 +177,12 @@ public class VnutrKrug extends Fragment{
             }
         });
 
+        allRas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_vnutrKrug_to_allRasxod);
+            }
+        });
 
 
 
@@ -196,8 +207,28 @@ public class VnutrKrug extends Fragment{
         d_Potok = doxod.ob_Dox-ob_Ras;
         potok.setText(String.valueOf(d_Potok));
 
-
+        ipotRas.setText(String.valueOf(proff.getName(data.getName())[2]));
+        eduRas.setText(String.valueOf(proff.getName(data.getName())[3]));
+        carRas.setText(String.valueOf(proff.getName(data.getName())[4]));
+        cardRas.setText(String.valueOf(proff.getName(data.getName())[5]));
 
     }
+
+    private void initRas(){
+        ipotRas = view.findViewById(R.id.ipotRas);
+        eduRas = view.findViewById(R.id.eduRas);
+        cardRas = view.findViewById(R.id.cardRas);
+        carRas = view.findViewById(R.id.carRas);
+
+        ipotRasBut = view.findViewById(R.id.IpotRasBut);
+        eduRasBut = view.findViewById(R.id.eduRasBut);
+        cardRasBut = view.findViewById(R.id.cardRasBut);
+        carRasBut = view.findViewById(R.id.carRasBut);
+
+        allRas = view.findViewById(R.id.allRas);
+
+    }
+
+
 
 }

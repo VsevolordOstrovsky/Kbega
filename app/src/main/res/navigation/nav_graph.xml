@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_vnutrKrug_to_doxChek"
             app:destination="@id/doxChek" />
+        <action
+            android:id="@+id/action_vnutrKrug_to_allRasxod"
+            app:destination="@id/allRasxod" />
     </fragment>
     <fragment
         android:id="@+id/profession"
@@ -71,5 +74,14 @@
         <action
             android:id="@+id/action_izmDox_to_doxChek"
             app:destination="@id/doxChek" />
+    </fragment>
+    <fragment
+        android:id="@+id/allRasxod"
+        android:name="com.example.kbega.Ras.AllRasxod"
+        android:label="fragment_all_rasxod"
+        tools:layout="@layout/fragment_all_rasxod" >
+        <action
+            android:id="@+id/action_allRasxod_to_vnutrKrug"
+            app:destination="@id/vnutrKrug" />
     </fragment>
 </navigation>

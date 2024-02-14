@@ -334,7 +334,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2">
@@ -344,6 +344,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:ignore="ScrollViewSize">
+
             <TextView
                 android:id="@+id/textView2020"
                 android:layout_width="match_parent"
@@ -365,14 +366,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/white"
-                        android:text=" Налоги:"
-                        android:textColor="@color/darkText" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -406,21 +399,6 @@
                         android:text=" выплата по кредитным карточкам:"
                         android:textColor="@color/darkText" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/white"
-                        android:text=" Прочие рассходы:"
-                        android:textColor="@color/darkText" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/white"
-                        android:text="Выплата по банковскому кредиту: (10%)"
-                        android:textColor="@color/darkText" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -436,17 +414,18 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView43"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/ipotRas"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="TextView" />
 
                         <ImageButton
-                            android:id="@+id/imageButton"
-                            android:layout_width="0dp"
+                            android:id="@+id/IpotRasBut"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="2"
                             android:backgroundTint="@color/white"
                             android:src="@drawable/closeschet" />
                     </LinearLayout>
@@ -458,17 +437,18 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView43"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/eduRas"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="TextView" />
 
                         <ImageButton
-                            android:id="@+id/imageButton"
-                            android:layout_width="0dp"
+                            android:id="@+id/eduRasBut"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="2"
                             android:backgroundTint="@color/white"
                             android:src="@drawable/closeschet" />
                     </LinearLayout>
@@ -480,17 +460,18 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView43"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/carRas"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="TextView" />
 
                         <ImageButton
-                            android:id="@+id/imageButton"
-                            android:layout_width="0dp"
+                            android:id="@+id/carRasBut"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="2"
                             android:backgroundTint="@color/white"
                             android:src="@drawable/closeschet" />
                     </LinearLayout>
@@ -502,88 +483,33 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView43"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/cardRas"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="TextView" />
 
                         <ImageButton
-                            android:id="@+id/imageButton"
-                            android:layout_width="0dp"
+                            android:id="@+id/cardRasBut"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
+                            android:layout_weight="2"
                             android:backgroundTint="@color/white"
                             android:src="@drawable/closeschet" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textView43"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="TextView" />
-
-                        <ImageButton
-                            android:id="@+id/imageButton"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:src="@drawable/closeschet" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textView43"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="TextView" />
-
-                        <ImageButton
-                            android:id="@+id/imageButton"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:src="@drawable/closeschet" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textView43"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="TextView" />
-
-                        <ImageButton
-                            android:id="@+id/imageButton"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/white"
-                            android:src="@drawable/closeschet" />
-                    </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
+
+            <Button
+                android:id="@+id/allRas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/addBlue"
+                android:text="Все расходы" />
         </LinearLayout>
     </ScrollView>
 

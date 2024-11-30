@@ -22,7 +22,7 @@ import com.example.kbega.R;
  * create an instance of this fragment.
  */
 public class AllRasxod extends Fragment {
-    View view;
+    private View view;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,6 +31,17 @@ public class AllRasxod extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private ImageButton closeBut;
+    private Button plus, minus;
+    private TextView countChil, priceChild, rasChild;
+
+    private int[] rasxod = new int[6];
+
+    private int children = 0;
+
+    private Ras ras;
+    Proff proff;
 
     public AllRasxod() {
         // Required empty public constructor
@@ -61,16 +72,10 @@ public class AllRasxod extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        this.ras = new Ras();
+        this.proff = new Proff();
     }
-    Ras ras = new Ras();
-    Proff proff = new Proff();
-    private ImageButton closeBut;
-    private Button plus, minus;
-    TextView countChil, priceChild, rasChild;
 
-    private int[] rasxod = new int[6];
-
-    private int children = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -81,24 +86,12 @@ public class AllRasxod extends Fragment {
         plus.setOnClickListener(onClickListener);
         minus.setOnClickListener(onClickListener);
 
-
-
-
-
-
-
-
         closeBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.action_allRasxod_to_vnutrKrug);
             }
         });
-
-
-
-
-
         return view;
     }
 
@@ -111,41 +104,30 @@ public class AllRasxod extends Fragment {
         priceChild = view.findViewById(R.id.priceChild);
         priceChild.setText(String.valueOf(ras.num[11]));
         rasChild = view.findViewById(R.id.rasChild);
-
     }
 
 
     private View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
-
             Button b = (Button) view;
             String str = b.getText().toString();
             clickOnChil(str);
-
-
-
-
         }
     };
 
     private void clickOnChil(String flag){
 
-        if(flag.equals("+") && children < 3){
+        if (flag.equals("+") && children < 3) {
             children++;
-            ras.rasChild+=(Integer.parseInt(priceChild.getText().toString()));
+            ras.rasChild = (Integer.parseInt(priceChild.getText().toString())) * children;
             rasChild.setText(String.valueOf(ras.rasChild));
-
         }
-        if(flag.equals("-") && children > 0){
+        if (flag.equals("-") && children > 0) {
             children--;
-            ras.rasChild=(Integer.parseInt(priceChild.getText().toString()));
+            ras.rasChild = (Integer.parseInt(priceChild.getText().toString())) * children;
             rasChild.setText(String.valueOf(ras.rasChild));
-
         }
         countChil.setText(String.valueOf(children));
-
-
     }
 }
